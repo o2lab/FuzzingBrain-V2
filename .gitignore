@@ -1,24 +1,48 @@
+# Python bytecode
+**/__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+
+# Virtual environments
 **/venv/
+
+# Workspace / runtime data
 **/workspace/
 **/workspace/*
+work/
+
+# Logs
+**/logs/
+*.log
+
+# Temp / test output
+**/tmp_*
+**/test_*
+!tests/test_*
+test_trace_output/
+
+# User-specific config
 **/examples/llm_config.local.yaml
 fuzzingbrain/llm_config.local.yaml
 task_view_*/
 documentation/analysis/
 experiment/
 
-# Work configurations (user-specific)
-work/
-
 # Test / coverage artifacts
-.coverage
+**/coverage.xml
+**/coverage.json
+**/.coverage
 htmlcov/
-.pytest_cache/
+**/.pytest_cache/
+**/.benchmarks/
+**/.benchmark_results/
 
 # Eval server runtime
 .eval_pids/
-logs/eval/
 FBv2-Dashboard/
 
 # Environment secrets
-.env
+**/.env
+.env.*
+!.env.example
