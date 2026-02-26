@@ -98,6 +98,7 @@ class LLMConfig:
             Provider.ANTHROPIC: ["anthropic", "ANTHROPIC"],
             Provider.GOOGLE: ["google", "GOOGLE", "gemini", "GEMINI"],
             Provider.XAI: ["xai", "XAI"],
+            Provider.DEEPSEEK: ["deepseek", "DEEPSEEK"],
         }
 
         # Check config first (case-insensitive)
@@ -111,6 +112,7 @@ class LLMConfig:
             Provider.ANTHROPIC: "ANTHROPIC_API_KEY",
             Provider.GOOGLE: "GEMINI_API_KEY",
             Provider.XAI: "XAI_API_KEY",
+            Provider.DEEPSEEK: "DEEPSEEK_API_KEY",
         }
         env_var = env_var_map.get(provider)
         if env_var:
