@@ -11,6 +11,12 @@ WORKSPACE_DIR="$SCRIPT_DIR/workspace"
 VENV_DIR="$SCRIPT_DIR/venv"
 PYTHON="$VENV_DIR/bin/python3"
 
+# Prepend venv/bin to PATH so any subprocess that does a bare PATH lookup
+# (e.g. subprocess.Popen(["celery", ...])) hits the venv's binary, not a
+# stale ~/.local/bin copy that may use the system Python with incompatible
+# site-packages.
+export PATH="$VENV_DIR/bin:$PATH"
+
 # =============================================================================
 # Colors
 # =============================================================================
