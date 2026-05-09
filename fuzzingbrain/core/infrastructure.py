@@ -9,6 +9,7 @@ Handles Redis and Celery worker lifecycle for CLI mode:
 import os
 import subprocess
 import socket
+import sys
 import time
 from typing import Optional
 from urllib.parse import urlparse
@@ -146,6 +147,8 @@ class CeleryWorkerManager:
         # Output goes to log file (not console) to prevent terminal interference
         self._worker_process = subprocess.Popen(
             [
+                sys.executable,
+                "-m",
                 "celery",
                 "-A",
                 "fuzzingbrain.celery_app",
