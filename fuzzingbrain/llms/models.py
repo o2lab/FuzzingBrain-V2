@@ -17,6 +17,7 @@ class Provider(Enum):
     ANTHROPIC = "anthropic"
     GOOGLE = "google"
     XAI = "xai"
+    DEEPSEEK = "deepseek"
 
 
 class TaskType(Enum):
