@@ -16,6 +16,7 @@ typing-extensions>=4.8.0
 litellm>=1.0.0
 google-generativeai
 anthropic>=0.18.0
+openai>=1.0.0
 
 # LLM Observability
 openlit>=1.0.0
@@ -24,9 +25,14 @@ openlit>=1.0.0
 clang>=14.0
 tree-sitter>=0.21.0
 tree-sitter-c>=0.21.0
+tiktoken>=0.5.0
 
 # Environment
 python-dotenv>=1.0.0
+PyYAML>=6.0
+
+# System
+psutil>=5.9.0
 
 # -----------------------------------------------------------------------------
 # FuzzingBrain v2 - New Dependencies
@@ -59,3 +65,9 @@ aiofiles>=23.0.0
 
 # CLI
 rich>=13.0.0
+
+# -----------------------------------------------------------------------------
+# Test dependencies (only needed for pytest)
+# -----------------------------------------------------------------------------
+pytest>=7.0.0
+mongomock>=4.1.0
